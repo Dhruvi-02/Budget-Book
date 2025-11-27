@@ -12,7 +12,7 @@ Features:
 - Interactive Charts to visualize financial data
 - Clean and responsive UI built with Html, CSS and JavaScript
 
-How to use
+How to use:
 - First Sign Up then Login
 - Add your Income or Expenses
 - Based on your income and expenses the history will be generated below
