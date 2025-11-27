@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+
+        <br>
+        
+        <form onsubmit="login(event)">
+            <div class="username">
+                <p id="user">Enter username:</p>
+                <input type="text" id="name" placeholder="Please enter username" title="Must contain uppercase and lowercase letters, no digits allowed" required>
+            </div>
+
+            <br>
+
+            <div class="password">
+                <p id="word">Enter password:</p>
+                <input type="password" maxlength="12" minlength="5" id="pass" placeholder="Please enter password" title="Must contain atleast 1 uppercase, 1 lowercase, 1 digit and 8 to 12 characters" required>
+            </div>
+
+            <br>
+
+            <div class="signUp">
+                <p id="sign">Don't have an account? <a href="signUp.html">Sign Up</a></p>
+            </div>
+
+            <br>
+
+            <button id="btn">Submit</button>
+        </form>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Vs Expense</title>
+    <style>
+        p {
+            text-align: center;
+            font-size: 45px;
+            margin-top: 50px;
+        }
+
+        canvas {
+            margin-left: 405px;
+            margin-top: 50px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body style="background: whitesmoke;">
+    <p><u>Income Vs Expense</p></h2>
+    <canvas id="barChart" width="400" height="400"></canvas>
+
+    <script>
+        let transactions=JSON.parse(localStorage.getItem("transactions")) || [];
+
+        let totalIncome = 0;
+        let totalExpense = 0;
+
+        transactions.forEach(t => {
+            if(t.type === "income") {
+                totalIncome += t.amount;
+            }
+            else {
+                totalExpense += t.amount;
+            }
+        });
+
+        new Chart(document.getElementById("barChart"), {
+            type: "bar",
+            data: {
+                labels: ["Income","Expense"],
+                datasets: [{
+                    label: "Amount",
+                    data: [totalIncome,totalExpense],
+                    backgroundColor: ["Green","Red"]
+                }]
+            },
+            options: {
+                responsive: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: {   
+                            font: {
+                                size: 20
+                            }
+                        }
+                    },
+                    y: {
+                        ticks: {
+                            font: {
+                                size: 15
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: "Amount",
+                            font: {
+                                size: 20
+                            }
+                        },
+                        beginatZero: true
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

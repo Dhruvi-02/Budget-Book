@@ -1,0 +1,136 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d1cfcf;
+    height: 50vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 420px;
+    margin: auto;
+    margin-top: 20px;
+    background: #f3f3f3;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#heading {
+    text-align: center;
+    font-size: 200%;
+    padding: 15px;
+}
+
+.box {
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(219, 239, 255);
+    font-size: 130%;
+    margin: 10px;
+    padding: 30px;
+}
+
+.input input {
+    width: 89%;
+    padding: 12px;
+    margin: 6px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: medium;
+    margin-left: 10px;
+}
+
+.input select{
+    width: 95%;
+    padding: 12px;
+    margin: 6px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: medium;
+    margin-left: 10px;
+}
+
+.input button {
+    color: white;
+    width: 95%;
+    padding: 12px;
+    margin: 6px 0;
+    background: rgb(0, 94, 255);
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: medium;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.input button:hover {
+    background: rgb(39, 70, 144);
+}
+
+#history {
+    text-align: center;
+    font-size: 25px;
+    margin: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #ebeaea;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    font-size: large;
+}
+
+.income-item {
+    border-left: 5px solid green;
+}
+
+.expense-item {
+    border-left: 5px solid red;
+}
+
+.delete-btn {
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.chart-btn {
+    display: flex;
+    width: 409px;
+}
+
+.chart {
+    color: white;
+    width: 50%;
+    padding: 12px;
+    margin: 6px 0;
+    background: rgb(11, 118, 185);
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: medium;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.chart-btn .chart:hover {
+    background: rgb(39, 70, 144);
+}
+

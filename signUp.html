@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link href="signUp.css" rel="stylesheet" />
+</head>
+<body>
+        <div class="box">
+            <h1>Sign Up</h1>
+            
+            <br>
+
+            <form onsubmit="signUp(event)">
+                <div class="user">
+                    <p id="user">Enter Username:</p>
+                    <input type="text" id="name" placeholder="Please enter username" title="Must contain uppercase and lowercase letters, no digits allowed" required>
+                </div>
+
+                <div class="password">
+                    <p id="word">Enter Password:</p>
+                    <input type="password" maxlength="12" minlength="5" id="pass" placeholder="Please enter password" title="Must contain atleast 1 uppercase, 1 lowercase, 1 digit and 8 to 12 characters" required>
+                </div>
+
+                <br>
+
+                <button>Submit</button>
+
+                <br>
+                 
+                <p id="result"></p>
+
+                <!-- <br>
+
+                <p id="loginPage" href="login.html"></p> -->
+
+            </form>
+        </div>
+
+        <script src="signUp.js"></script>
+    
+</body>
+</html>

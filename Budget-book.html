@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link href="Budget-book.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+        
+        <p id="heading"><b>Budget Book</b></p>
+
+        <div class="box">
+            <h3>Total Balance: ₹<span id="balance">0</span></h3>
+            <br>
+            <p>Income: ₹<span id="income">0</span> | Expense: ₹<span id="expense">0</span></p>
+        </div>
+
+        <div class="input">
+            <input type="text" placeholder="Enter Amount" id="amount" >
+            <input type="text" placeholder="Note (optional)" id="note" >
+            
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            
+            <button onclick="addTransaction()">Add</button>
+        </div>
+        
+        <div class="chart-btn">
+        <button class="chart" onclick="genChart()">Generate Chart</button> <button class="chart" onclick="iVse()">Income Vs Expense</button>
+        </div>
+
+        <p id="history"><b>History</b></p>
+        <ul id="list"></ul>
+
+    </div>
+
+    <script src="Budget-book.js"></script>
+
+</body>
+</html>

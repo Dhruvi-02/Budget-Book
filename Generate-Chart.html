@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie Chart</title>
+    <style>
+       p {
+        font-size: 45px;
+        text-align: center;
+        margin-top: 50px;
+       }
+
+       canvas {
+        margin-left: 428px;
+       }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body style="background: whitesmoke;">
+    <p><u>Expense Analysis</u></p>
+    <canvas id="pieChart" width="400" height="400"></canvas>
+
+    <script>
+        let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+
+        let expenseData = {};
+        transactions.forEach(t => {
+            if(t.type === "expense") {
+                let key = t.note || "No Note";
+                expenseData[key] = (expenseData[key] || 0) + t.amount;
+            }
+        });
+
+        let labels = Object.keys(expenseData);
+        let values = Object.values(expenseData);
+
+        new Chart(document.getElementById("pieChart"), {
+            type: "pie",
+            data: {
+                labels: labels,
+                datasets: [{
+                    data: values
+                }]
+            },
+            options: {
+                responsive: false,
+                maintainAspectRatio: false
+            }
+        });
+    </script>
+</body>
+</html>
