@@ -20,4 +20,4 @@ How to use:
 
 Budget Book helps in managing money smarter and using it wiser!
 
-Note: Budget Book uses following CDN libraries(Chart.js) for interactive chart generation. No additional installation required as it is included via <script> tag in Html files.
+Note: Budget Book uses CDN library(Chart.js) for interactive chart generation. No additional installation required as it is included via <script> tag in Html files.
